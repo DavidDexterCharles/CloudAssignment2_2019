@@ -1,0 +1,64 @@
+Run manage.py createsuperuser to create an administrator.
+
+Username: admin
+Email address: david.dexter.charles@gmail.com
+Password: !QA@WS3ed
+Password (again):!QA@WS3ed
+Superuser created successfully.
+
+******************************************************************************************************************************************
+Finally got it to work: had to do an eb upgrade:=>[ pip3 install -U awsebcli]=>result[eb CLI 3.15.3 (Python 3.6.8)]
+Environment details for: django-env
+  Application name: django-tutorial
+  Region: us-west-2
+  Deployed Version: app-191021_183634
+  Environment ID: e-xb5t8tmv3f
+  Platform: arn:aws:elasticbeanstalk:us-west-2::platform/Python 3.6 running on 64bit Amazon Linux/2.9.3
+  Tier: WebServer-Standard-1.0
+  CNAME: django-env.v6f2ndmvbr.us-west-2.elasticbeanstalk.com
+  Updated: 2019-10-21 18:38:17.728000+00:00
+  Status: Launching
+  Health: Green
+
+******************************************************************************************************************************************
+
+Creating Elastic Beanstalk Environments with the AWS CLI
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-create-awscli.html
+
+AWS Elastic BeanstalkDeveloper Guide
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-create.html
+
+Controlling Access to Elastic Beanstalk
+https://forums.aws.amazon.com/thread.jspa?threadID=219035
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.managed-policies.html
+
+Devops — CICD Pipeline 2: Deploying on AWS with Elastic Beanstalk
+https://medium.com/@faithfulanere/devops-cicd-pipeline-1-deploying-on-aws-7edbfd449c8d
+https://medium.com/faun/devops-cicd-pipeline-2-deploying-on-aws-with-elastic-beanstalk-5f19a5476848
+
+******************************************************************************************************************************************
+
+
+
+
+3) Create an environment and deploy your application to it with eb create.
+
+ubuntu:~/environment/A2/ebdjango $ eb create django-env
+WARNING: Insufficient IAM privileges. Unable to determine if instance profile 'aws-elasticbeanstalk-ec2-role' exists, assuming that it exists.
+Creating application version archive "app-191021_175047".
+Uploading django-tutorial/app-191021_175047.zip to S3. This may take a while.
+Upload Complete.
+Environment details for: django-env
+  Application name: django-tutorial
+  Region: us-west-2
+  Deployed Version: app-191021_175047
+  Environment ID: e-mfsz4nrf3y
+  Platform: arn:aws:elasticbeanstalk:us-west-2::platform/Python 3.6 running on 64bit Amazon Linux/2.9.3
+  Tier: WebServer-Standard-1.0
+  CNAME: UNKNOWN
+  Updated: 2019-10-21 17:50:51.781000+00:00
+Printing Status:
+2019-10-21 17:50:50    INFO    createEnvironment is starting.
+2019-10-21 17:50:51    INFO    Using elasticbeanstalk-us-west-2-398627994346 as Amazon S3 storage bucket for environment data.
+ -- Events -- (safe to Ctrl+C)
+******************************************************************************************************************************************
