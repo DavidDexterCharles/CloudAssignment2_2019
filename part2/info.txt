@@ -1,0 +1,10 @@
+Regarding this cmd:
+    |>ecs-cli configure --region us-east-1 --cluster foodtrucks
+from
+    |>https://docker-curriculum.com/#multi-container-environments
+see following:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
+
+--------------------------------------------------
+ ecs-cli configure --region us-east-1 --cluster foodtrucks
+INFO[0000] Saved ECS CLI cluster configuration default. 
